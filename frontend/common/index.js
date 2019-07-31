@@ -15,8 +15,8 @@ window.Koji = Koji
 // Load p5 sketches here!
 require('script-loader!app/index.js')
 require('script-loader!app/utilities.js')
-require('script-loader!app/clickable.js')
-require('script-loader!app/entities.js')
+require('script-loader!app/lib/clickable.js')
+require('script-loader!app/lib/entities.js')
 new p5()
 
 // DO NOT TOUCH

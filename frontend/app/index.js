@@ -35,7 +35,7 @@ let soundImage
 let muteImage
 
 // Size stuff
-let objSize //base size modifier of all objects, calculated based on screen size
+let objSize // base size modifier of all objects, calculated based on screen size
 
 // game size in tiles, using bigger numbers will decrease individual object sizes but allow more objects to fit the screen
 // Keep in mind that if you change this, you might need to change text sizes as well
