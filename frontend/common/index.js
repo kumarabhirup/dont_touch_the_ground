@@ -16,6 +16,8 @@ window.Koji = Koji
 require('script-loader!app/index.js')
 require('script-loader!app/game.js')
 require('script-loader!app/not-game.js')
+require('script-loader!app/components/object.js')
+require('script-loader!app/components/platform.js')
 require('script-loader!app/utilities.js')
 require('script-loader!app/lib/clickable.js')
 require('script-loader!app/lib/entities.js')

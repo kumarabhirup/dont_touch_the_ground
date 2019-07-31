@@ -23,7 +23,7 @@ function gamePlay() {
   text(score, scoreX, scoreY)
 
   // Lives draw
-  let lifeSize = objSize;
+  let lifeSize = objSize
   for (let i = 0; i < lives; i++) {
       image(imgLife, lifeSize / 2 + lifeSize * i, lifeSize / 2, lifeSize, lifeSize)
   }
