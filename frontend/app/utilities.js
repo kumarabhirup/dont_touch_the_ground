@@ -1,5 +1,3 @@
-// UTILITIES
-
 // Use this to check high score whenever you need. It will update the highscore and save it to local storage
 function checkHighscore() {
     if (score > highScore) {
@@ -20,7 +18,6 @@ function playMusic() {
 
 function disableSound() {
     getAudioContext().suspend()
-
     soundEnabled = false
 }
 
