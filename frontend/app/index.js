@@ -1,9 +1,21 @@
-/* global p5, Koji */
+/* global p5, Koji, Matter */
+
+// imports
+const { 
+  Engine,
+  World,
+  MouseConstraint,
+  Mouse,
+  Constraint
+} = Matter
 
 let myFont // The font we'll use throughout the app
 
 let gameOver = false // If it's true the game will render the main menu
 let gameBeginning = true // Should be true only before the user starts the game for the first time
+
+let world, engine
+let mConstraint
 
 // Game objects
 // Declare game objects here like player, enemies etc
@@ -98,12 +110,22 @@ function setup() {
 
     textFont(myFont) // set our font
 
+    // Engine and World setup
+    engine = Engine.create()
+    world = engine.world
+
     playButton = new PlayButton()
     soundButton = new SoundButton()
 
     gameBeginning = true
 
     playMusic()
+
+    // Mouse moving
+    const mouse = Mouse.create(canvas.elt)
+    options = { mouse }
+    mConstraint = MouseConstraint.create(engine, options)
+    World.add(world, mConstraint)
 }
 
 // An infinite loop that never ends in p5
@@ -118,6 +140,7 @@ function draw() {
     // Draw UI
     if (gameOver || gameBeginning) {
         gameBeginningOver()
+        Engine.update(engine)
     } else {
         gamePlay()
     }

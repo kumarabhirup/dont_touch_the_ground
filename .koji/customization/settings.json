@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "objectShape": "circle"
+  },
+  "@@editor": [{
+    "key": "settings",
+    "name": "Settings",
+    "icon": "⚙",
+    "source": "settings.json",
+    "fields": [{
+      "key": "objectShape",
+      "name": "Shape of the object",
+      "type": "text",
+      "description": "Shape of the object to dodge. Either `circle` or `rectangle`, else see an error."
+    }]
+  }]
+}
