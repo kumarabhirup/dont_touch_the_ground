@@ -18,9 +18,11 @@ let world, engine
 let mConstraint
 
 // Game objects
-// Declare game objects here like player, enemies etc
+let playableObject
+let platform
+let ground
 
-// Buttons
+// Buttons and HomePage
 let playButton
 let soundButton
 
@@ -37,6 +39,7 @@ let lives
 // Images
 let imgLife
 let imgBackground
+let imgObject
 
 // Audio
 let sndMusic
@@ -72,8 +75,8 @@ function preload() {
         imgBackground = loadImage(Koji.config.images.background)
     }
 
+    imgObject = Koji.config.images.objectImage ? loadImage(Koji.config.images.objectImage) : null
     imgLife = loadImage(Koji.config.images.lifeIcon)
-
     soundImage = loadImage(Koji.config.images.soundImage)
     muteImage = loadImage(Koji.config.images.muteImage)
 
@@ -96,7 +99,7 @@ function setup() {
         sizeModifier = 1
     }
 
-    createCanvas(width, height)
+    const canvas = createCanvas(width, height)
 
     // Magically determine basic object size depending on size of the screen
     objSize = floor(min(floor(width / gameSize), floor(height / gameSize)) * sizeModifier)
@@ -116,15 +119,20 @@ function setup() {
 
     playButton = new PlayButton()
     soundButton = new SoundButton()
+    ground = new Ground({ x: width/2, y: height }, { width, height: 100 }, { shape: 'rectangle' })
+    playableObject = new GameObject (
+        { x: width / 2, y: -100 }, 
+        { radius: objSize * 2, width: objSize * 2, height: objSize * 2 }, // radius works for circle shape, width and height work for rectangular shape
+        { shape: Koji.config.strings.objectShape, image: imgObject, color: { r: 0, g: 255, b: 255, a: 1 } } // either `rectangle` or `circle` shape allowed. Else see some error.
+    )
 
     gameBeginning = true
 
-    playMusic()
+    // playMusic()
 
     // Mouse moving
-    const mouse = Mouse.create(canvas.elt)
-    options = { mouse }
-    mConstraint = MouseConstraint.create(engine, options)
+    const mouse = Mouse.create()
+    mConstraint = MouseConstraint.create(engine, { mouse })
     World.add(world, mConstraint)
 }
 
@@ -140,9 +148,9 @@ function draw() {
     // Draw UI
     if (gameOver || gameBeginning) {
         gameBeginningOver()
-        Engine.update(engine)
     } else {
         gamePlay()
+        Engine.update(engine)
     }
 
     soundButton.render()

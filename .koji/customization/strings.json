@@ -1,5 +1,6 @@
 {
   "strings": {
+    "objectShape": "circle",
     "fontFamily": "https://fonts.googleapis.com/css?family=Russo+One",
     "title": "Don't touch the ground!",
     "instructions1": "Let the ball not go out of the frame or hit the ground",
@@ -15,67 +16,74 @@
     "lives": "3"
   },
   "@@editor": [{
-    "key": "strings",
-    "name": "Game Settings",
-    "icon": "💡",
-    "source": "strings.json",
-    "fields": [{
-        "key": "title",
-        "name": "Game Title",
-        "description": "The title that is displayed in the start menu",
-        "type": "text"
-      },
-      {
-        "key": "instructions1",
-        "name": "Game Instructions 1",
-        "type": "text"
-      },
-      {
-        "key": "instructions2",
-        "name": "Game Instructions 2",
-        "type": "text"
-      },
-      {
-        "key": "instructions3",
-        "name": "Game Instructions 3",
-        "type": "text"
-      },
-      {
-        "key": "fontFamily",
-        "name": "Font Family",
-        "description": "Google fonts link to font to use in the game",
-        "type": "text"
-      },
-      {
-        "key": "playButtonText",
-        "name": "Play Button Text",
-        "description": "Label on the Play Button",
-        "type": "text"
-      },
-      {
-        "key": "scoreText",
-        "name": "Score Text",
-        "description": "Default: 'Score:'",
-        "type": "text"
-      },
-      {
-        "key": "highscoreText",
-        "name": "High Score Text",
-        "description": "Default: 'High Score:'",
-        "type": "text"
-      },
-      {
-        "key": "highscoreGainedText",
-        "name": "High Score Gained Text",
-        "description": "When you get a new high score",
-        "type": "text"
-      },
-      {
-        "key": "lives",
-        "name": "Max Lives",
-        "description": "How many lives you initially have",
-        "type": "text"
-      }
-    ]
-  }]
+      "key": "objectShape",
+      "name": "Shape of the object",
+      "type": "text",
+      "description": "Shape of the object to dodge. Either `circle` or `rectangle`, else see an error."
+    },
+    {
+      "key": "strings",
+      "name": "Game Settings",
+      "icon": "💡",
+      "source": "strings.json",
+      "fields": [{
+          "key": "title",
+          "name": "Game Title",
+          "description": "The title that is displayed in the start menu",
+          "type": "text"
+        },
+        {
+          "key": "instructions1",
+          "name": "Game Instructions 1",
+          "type": "text"
+        },
+        {
+          "key": "instructions2",
+          "name": "Game Instructions 2",
+          "type": "text"
+        },
+        {
+          "key": "instructions3",
+          "name": "Game Instructions 3",
+          "type": "text"
+        },
+        {
+          "key": "fontFamily",
+          "name": "Font Family",
+          "description": "Google fonts link to font to use in the game",
+          "type": "text"
+        },
+        {
+          "key": "playButtonText",
+          "name": "Play Button Text",
+          "description": "Label on the Play Button",
+          "type": "text"
+        },
+        {
+          "key": "scoreText",
+          "name": "Score Text",
+          "description": "Default: 'Score:'",
+          "type": "text"
+        },
+        {
+          "key": "highscoreText",
+          "name": "High Score Text",
+          "description": "Default: 'High Score:'",
+          "type": "text"
+        },
+        {
+          "key": "highscoreGainedText",
+          "name": "High Score Gained Text",
+          "description": "When you get a new high score",
+          "type": "text"
+        },
+        {
+          "key": "lives",
+          "name": "Max Lives",
+          "description": "How many lives you initially have",
+          "type": "text"
+        }
+      ]
+    }
+  ]
 }

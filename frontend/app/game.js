@@ -1,4 +1,4 @@
-/* global p5, Koji */
+/* global p5, Koji, Object, Platform */
 
 function gamePlay() {
   // Update all floating text objects
@@ -8,11 +8,8 @@ function gamePlay() {
   }
 
   // InGame UI
-  textSize(objSize * 1)
-  fill(Koji.config.colors.scoreColor)
-  textAlign(CENTER, CENTER)
-  text("Game happens here!", width / 2, height / 2)
-
+  ground.show()
+  playableObject.show()
 
   // Score draw
   let scoreX = width - objSize / 2
