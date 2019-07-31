@@ -12,8 +12,8 @@
     "scoreText": "Score:",
     "highscoreText": "High Score:",
     "highscoreGainedText": "New High Score!",
-    "health": "3",
-    "lives": "3"
+    "health": "4",
+    "lives": "4"
   },
   "@@editor": [{
       "key": "objectShape",

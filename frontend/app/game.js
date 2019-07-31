@@ -8,7 +8,8 @@ function gamePlay() {
   }
 
   // InGame UI
-  ground.show()
+  ground.show(); groundLeft.show(); groundRight.show(); groundTop.show();
+  platform.show()
   playableObject.show()
 
   // Score draw

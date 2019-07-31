@@ -20,7 +20,7 @@ let mConstraint
 // Game objects
 let playableObject
 let platform
-let ground
+let ground, groundLeft, groundRight, groundTop
 
 // Buttons and HomePage
 let playButton
@@ -119,12 +119,19 @@ function setup() {
 
     playButton = new PlayButton()
     soundButton = new SoundButton()
-    ground = new Ground({ x: width/2, y: height }, { width, height: 100 }, { shape: 'rectangle' })
+
+    ground = new Ground({ x: width / 2, y: height }, { width, height: 20 }, { shape: 'rectangle' })
+    groundTop = new Ground({ x: width / 2, y: 0 }, { width, height: 150 }, { shape: 'rectangle' })
+    groundLeft = new Ground({ x: 0, y: height / 2 }, { width: 10, height }, { shape: 'rectangle' })
+    groundRight = new Ground({ x: width, y: height / 2 }, { width: 10, height }, { shape: 'rectangle' })
+
+    platform = new Platform({ x: width / 2 , y: 200 }, { width: objSize * 8, height: objSize * 0.8 }, { shape: 'rectangle', rotate: true })
     playableObject = new GameObject (
-        { x: width / 2, y: -100 }, 
+        { x: width / 2, y: 170 }, 
         { radius: objSize * 2, width: objSize * 2, height: objSize * 2 }, // radius works for circle shape, width and height work for rectangular shape
-        { shape: Koji.config.strings.objectShape, image: imgObject, color: { r: 0, g: 255, b: 255, a: 1 } } // either `rectangle` or `circle` shape allowed. Else see some error.
+        { shape: Koji.config.strings.objectShape, image: imgObject, color: { r: 0, g: 255, b: 255, a: 1 }, rotate: true } // either `rectangle` or `circle` shape allowed. Else see some error.
     )
+
 
     gameBeginning = true
 
