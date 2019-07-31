@@ -1,70 +1,17 @@
 {
   "sounds": {
-    "backgroundMusic": "https://objects.koji-cdn.com/d2442438-5d59-4b2a-b875-75a589ffc6d4/ArcadeSpaceAdventures.mp3",
-    "explosion": "https://objects.koji-cdn.com/52fec6a8-e0dc-45d0-a326-cb1bf8e40b9d/explosion.wav",
-    "life": "https://objects.koji-cdn.com/52fec6a8-e0dc-45d0-a326-cb1bf8e40b9d/life.wav",
-    "powerup": "https://objects.koji-cdn.com/52fec6a8-e0dc-45d0-a326-cb1bf8e40b9d/shield.wav",
-    "lose": "https://objects.koji-cdn.com/52fec6a8-e0dc-45d0-a326-cb1bf8e40b9d/lose.wav",
-    "shootSound": "https://objects.koji-cdn.com/d2442438-5d59-4b2a-b875-75a589ffc6d4/shoot.mp3",
-    "enemyHit": "https://objects.koji-cdn.com/d2442438-5d59-4b2a-b875-75a589ffc6d4/enemyhit.mp3",
-    "enemyDestroy": "https://objects.koji-cdn.com/d2442438-5d59-4b2a-b875-75a589ffc6d4/enemyDie.mp3"
+    "backgroundMusic": "https://objects.koji-cdn.com/63bc2fb0-0c42-4acb-bee8-a060e9286a95/backgroundMusicSpace.mp3"
   },
-  "@@editor": [
-    {
-      "key": "sounds",
-      "name": "Sounds",
-      "icon": "🎵",
-      "source": "sounds.json",
-      "fields": [
-        {
-          "key": "backgroundMusic",
-          "name": "Background Music",
-          "description": "Music to loop in background",
-          "type": "sound"
-        },
-        {
-          "key": "explosion",
-          "name": "Explosion",
-          "description": "When you hit a falling object",
-          "type": "sound"
-        },
-        {
-          "key": "life",
-          "name": "Life Sound",
-          "description": "When you collect a life",
-          "type": "sound"
-        },
-        {
-          "key": "powerup",
-          "name": "Powerup Sound",
-          "description": "When you collect a powerup",
-          "type": "sound"
-        },
-        {
-          "key": "lose",
-          "name": "Lose Sound",
-          "description": "When you lose the game",
-          "type": "sound"
-        },
-        {
-          "key": "shootSound",
-          "name": "Shoot Sound",
-          "description": "When you shoot",
-          "type": "sound"
-        },
-        {
-          "key": "enemyHit",
-          "name": "Enemy Hit",
-          "description": "When an enemy gets hit",
-          "type": "sound"
-        },
-        {
-          "key": "enemyDestroy",
-          "name": "Enemy Destroy",
-          "description": "When an enemy gets destroyed",
-          "type": "sound"
-        }
-      ]
-    }
-  ]
+  "@@editor": [{
+    "key": "sounds",
+    "name": "Sounds",
+    "icon": "🎵",
+    "source": "sounds.json",
+    "fields": [{
+      "key": "backgroundMusic",
+      "name": "Background Music",
+      "description": "Music to loop in background",
+      "type": "sound"
+    }]
+  }]
 }
