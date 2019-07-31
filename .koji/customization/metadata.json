@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "name": "My Game Template",
-    "short_name": "Game Template",
-    "description": "An extension of the P5 Koji Scaffold, designed to save time when developing a new game template.",
+    "name": "Don't touch the ground!",
+    "short_name": "dont_touch_the_ground",
+    "description": "A game to keep your playfulness alive!",
     "image": "https://images.koji-cdn.com/025a4ca3-2c61-4cf2-b821-55b7023c47dc/kojireact.png",
     "icon": "https://objects.koji-cdn.com/025a4ca3-2c61-4cf2-b821-55b7023c47dc/94e432a7-951b-4b41-a726-d5d9fc66c533.ico",
     "icon192": "",
