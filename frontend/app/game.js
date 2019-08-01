@@ -26,5 +26,10 @@ function gamePlay() {
       image(imgLife, lifeSize / 2 + lifeSize * i, lifeSize / 2, lifeSize, lifeSize)
   }
 
+  // Lose life if touched the ground
+  if (playableObject.didTouch(ground, 'rectangle')) {
+      loseLife()
+  }
+
   cleanup()
 }

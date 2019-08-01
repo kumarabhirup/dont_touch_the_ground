@@ -33,13 +33,27 @@ class GameObject {
    * @returns true if the otherElement is touching this element.
    * @param {object} otherElement  - {sizing: {x: 100, y: 100}, body: Matter-js-body}
    */
-  didTouch(otherElement) {
+  didTouch(otherElement, shape = 'circle') {
+    let circle, rectangle
     let body = otherElement.body
 
-    let circle = { x: this.cordinates.x, y: this.cordinates.y, radius: this.sizing.radius }
-    let rectangle = { x: body.position.x, y: body.position.y, w: otherElement.sizing.width, h: otherElement.sizing.height }
+    console.log(this)
 
-    return rectCircleColliding(circle, rectangle)
+    if (this.settings.shape === 'circle' && shape === 'circle') {
+
+      console.log('checking circles')
+      return circleCircleColliding({ x: this.body.position.x, y: this.body.position.y, r: this.sizing.radius })
+
+    } else if ((this.settings.shape === 'circle' && shape === 'rectangle') || (this.settings.shape === 'rectangle' && shape === 'circle')) {
+
+      console.log('checking circle and rectangle')
+
+      circle = { x: this.body.position.x, y: this.body.position.y, r: this.sizing.radius }
+      rectangle = { x: body.position.x, y: body.position.y, w: otherElement.sizing.width, h: otherElement.sizing.height }
+
+      return rectCircleColliding(circle, rectangle)
+      
+    }
   }
 
   show() {

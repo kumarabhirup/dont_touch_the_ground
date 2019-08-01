@@ -233,12 +233,6 @@ function loseLife() {
     }
 }
 
-function mousePressed() {
-    if (playableObject.didTouch(ground)) {
-        console.log('TOUCH!')
-    }
-}
-
 // The way to use Floating Text:
 // floatingTexts.push(new FloatingText(...));
 // Everything else like drawing, removing it after it's done etc, will be done automatically
