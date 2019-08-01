@@ -1,4 +1,6 @@
-/* global Koji, GameObject */
+/* global Koji, GameObject, Matter */
+
+const { Constraint, World } = Matter
 
 class Platform extends GameObject {
   constructor (
