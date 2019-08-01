@@ -26,9 +26,28 @@ function gamePlay() {
       image(imgLife, lifeSize / 2 + lifeSize * i, lifeSize / 2, lifeSize, lifeSize)
   }
 
-  // Lose life if touched the ground
+  // Lose life if ball touched the ground
   if (playableObject.didTouch(ground, 'rectangle')) {
-      loseLife()
+    // reconstruct the playableObject
+    playableObject.destruct()
+    playableObject = new GameObject (
+        { x: width / 2, y: 170 }, 
+        { radius: objSize * 2, width: objSize * 2, height: objSize * 2 }, // radius works for circle shape, width and height work for rectangular shape
+        { shape: Koji.config.strings.objectShape, image: imgObject, color: { r: 0, g: 255, b: 255, a: 1 }, rotate: true } // either `rectangle` or `circle` shape allowed. Else see some error.
+    )
+    playableObject.show()
+
+    // reconstruct the platform
+    platform.destruct()
+    platform = new Platform({ x: width / 2 , y: 200 }, { width: objSize * 8, height: objSize * 0.8 }, { shape: 'rectangle', color: { r: 0, g: 0, b: 0, a: 1 }, rotate: true })
+    platform.show()
+
+    loseLife()
+  }
+
+  // increase the score on bounce of playableObject on the platform
+  if (playableObject.didTouch(platform, 'rectangle')) {
+    ++score
   }
 
   cleanup()

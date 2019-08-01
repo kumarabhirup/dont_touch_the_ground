@@ -218,6 +218,7 @@ function keyReleased() {
 function init() {
     gameOver = false
 
+    lives = startingLives
     highscoreGained = false
     score = 0
 

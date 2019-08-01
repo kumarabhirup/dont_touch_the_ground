@@ -37,16 +37,11 @@ class GameObject {
     let circle, rectangle
     let body = otherElement.body
 
-    console.log(this)
-
     if (this.settings.shape === 'circle' && shape === 'circle') {
 
-      console.log('checking circles')
       return circleCircleColliding({ x: this.body.position.x, y: this.body.position.y, r: this.sizing.radius })
 
     } else if ((this.settings.shape === 'circle' && shape === 'rectangle') || (this.settings.shape === 'rectangle' && shape === 'circle')) {
-
-      console.log('checking circle and rectangle')
 
       circle = { x: this.body.position.x, y: this.body.position.y, r: this.sizing.radius }
       rectangle = { x: body.position.x, y: body.position.y, w: otherElement.sizing.width, h: otherElement.sizing.height }
@@ -99,5 +94,9 @@ class GameObject {
     }
 
     pop()
+  }
+
+  destruct() {
+    World.remove(world, this.body)
   }
 }
