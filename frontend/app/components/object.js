@@ -61,7 +61,7 @@ class GameObject {
           :
           (() => {
             rectMode(CENTER)
-            fill(255, 255, 255)
+            fill(this.settings.color.r, this.settings.color.g, this.settings.color.b)
             rect(0, 0, this.sizing.width, this.sizing.height)
           })()
         break
