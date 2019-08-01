@@ -1,11 +1,13 @@
 {
   "strings": {
     "objectShape": "circle",
+    "scoreIncreaseSpeed": "2",
+    "scoreDecreaseSpeed": "1",
     "fontFamily": "https://fonts.googleapis.com/css?family=Russo+One",
     "title": "Don't touch the ground!",
-    "instructions1": "Let the ball not go out of the frame or hit the ground",
-    "instructions2": "Drag the platform brick to save the ball",
-    "instructions3": "The more you touch, more the high score!",
+    "instructions1": "Let the ball not hit the ground!",
+    "instructions2": "Drag the platform brick to save the ball from ground.",
+    "instructions3": "The more you keep it in air, the higher you score!",
     "gameOverText": "GAME OVER",
     "highScoreText": "High Score:",
     "playButtonText": "PLAY NOW",
@@ -20,6 +22,18 @@
       "name": "Shape of the object",
       "type": "text",
       "description": "Shape of the object to dodge. Either `circle` or `rectangle`, else see an error."
+    },
+    {
+      "key": "scoreIncreaseSpeed",
+      "name": "Score Increase Speed",
+      "type": "text",
+      "description": "Number to increase the score by when ball is in the air."
+    },
+    {
+      "key": "scoreDecreaseSpeed",
+      "name": "Score Decrease Speed",
+      "type": "text",
+      "description": "Number to decrease the score by when ball is touching the platform."
     },
     {
       "key": "strings",

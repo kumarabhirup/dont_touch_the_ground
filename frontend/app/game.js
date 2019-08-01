@@ -45,9 +45,12 @@ function gamePlay() {
     loseLife()
   }
 
-  // increase the score on bounce of playableObject on the platform
+  // decrease the score when ball is touching the platform
   if (playableObject.didTouch(platform, 'rectangle')) {
-    ++score
+    if (score > 0) score -= parseInt(Koji.config.strings.scoreDecreaseSpeed)
+  } else {
+  // increase the score when ball is in the air
+    score += parseInt(Koji.config.strings.scoreIncreaseSpeed)
   }
 
   cleanup()
