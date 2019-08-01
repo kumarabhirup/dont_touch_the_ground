@@ -28,6 +28,20 @@ class GameObject {
     World.add(world, this.body)
   }
 
+  /**
+   * @description check for collision of this object to any other object
+   * @returns true if the otherElement is touching this element.
+   * @param {object} otherElement  - {sizing: {x: 100, y: 100}, body: Matter-js-body}
+   */
+  didTouch(otherElement) {
+    let body = otherElement.body
+
+    let circle = { x: this.cordinates.x, y: this.cordinates.y, radius: this.sizing.radius }
+    let rectangle = { x: body.position.x, y: body.position.y, w: otherElement.sizing.width, h: otherElement.sizing.height }
+
+    return rectCircleColliding(circle, rectangle)
+  }
+
   show() {
     const { position, angle } = this.body
     const diameter = this.sizing.radius * 2

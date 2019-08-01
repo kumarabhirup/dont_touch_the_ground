@@ -21,6 +21,7 @@ require('script-loader!app/components/platform.js')
 require('script-loader!app/components/ground.js')
 require('script-loader!app/utilities.js')
 require('script-loader!app/lib/clickable.js')
+require('script-loader!app/lib/collisions.js')
 require('script-loader!app/lib/entities.js')
 new p5()
 
