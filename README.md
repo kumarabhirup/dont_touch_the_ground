@@ -16,6 +16,17 @@ I've provided comments in the most important parts of the code, so you don't get
 
 Feel free to modify anything, upgrade the game, add more stuff!
 
+## 🖥️ Spin up the game locally
+
+- Run
+```
+$ git clone <YOUR_REMIXED_REMOTE_URL> <PROJECT_NAME>
+$ cd <PROJECT_NAME>/frontend
+$ npm i
+$ npm start
+```
+- Visit [https://localhost:8080](https://localhost:8080)
+
 ## ⚒️ Customizations
 
 Things that can be customized:
