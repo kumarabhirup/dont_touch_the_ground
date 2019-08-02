@@ -1,17 +1,20 @@
-# `📦 p5.js Scaffold`
+# `🍏 Don't touch the ground!`
 
-Start your day with some p5.js juice!
+## 🤠 Instructions
+
+- Let the ball not hit the ground!
+- Drag the platform brick to save the ball from ground.
+- The more you keep the ball in the air, the higher you score!
+
+- If the ball remains stagnant, score decreases.
 
 ## 😃 Getting Started
+
 Main code is in *frontend/app/index.js*
 
 I've provided comments in the most important parts of the code, so you don't get lost. 
 
 Feel free to modify anything, upgrade the game, add more stuff!
-
-## 💥 About The Game
-
-Write about your game here.
 
 ## ⚒️ Customizations
 
@@ -19,28 +22,46 @@ Things that can be customized:
 
 ### Colors
 
-- Color names here.
+- Background color
+- Instructions text color
+- Score text color
+- Highscore text color
+- *And so much more!*
+- **Take a look at the Koji Color VCC to see what colors can be altered.**
 
 
 ### Images
 
-- Put all your Image names here.
+- Object Image
+- Platform Image
+- Life Icon
+- Sound Image
+- Mute Image
+- Background
 
 
 ### Sounds
 
-- Put your Sound names here.
+- Background music
 
 ### Game Settings
 
-- Put here game settings here.
+- `strings.json`: objectShape 👉 either `rectangle` or `circle`
+- `strings.json`: scoreIncreaseSpeed 👉 integer to increase the score by when the object is in the air.
+- `strings.json`: scoreDecreaseSpeed 👉 integer to decrease the score by when the object is stagnant.
 
 ## 📖 Notes
 
 Avoid resizing the game window while playing, weird stuff happens.
 
-Few Koji Visual Customization Controls are already there for you to use. They were put together by @Svarog on Koji platform.
+Few Koji Visual Customization Controls are already there for you to use. They were put together by @Svarog and @kumar_abhirup on Koji platform.
+
+## 📝 Licence
+
+**GPL © [Kumar Abhirup](https://kumar.now.sh)**
+
+_Follow me 👋 **on Twitter**_ →   [![Twitter](https://img.shields.io/twitter/follow/kumar_abhirup.svg?style=social&label=@kumar_abhirup)](https://twitter.com/kumar_abhirup/)
 
 ## Credits for assets
 
-Put your assets credit here.
+OpenGameArt 👉 [https://opengameart.org](https://opengameart.org)
