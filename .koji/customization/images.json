@@ -1,6 +1,7 @@
 {
   "images": {
     "objectImage": "",
+    "platformImage": "",
     "soundImage": "https://i.imgur.com/rtFppa8.png",
     "muteImage": "https://i.imgur.com/AR7C733.png",
     "lifeIcon": "https://i.imgur.com/SKksWaw.png",
@@ -15,6 +16,12 @@
         "key": "objectImage",
         "name": "Object Image",
         "description": "Image of the object that you are to keep away from the ground.",
+        "type": "image"
+      },
+      {
+        "key": "platformImage",
+        "name": "Platform Image",
+        "description": "Image of the platform that you are gonna use to hit the object.",
         "type": "image"
       },
       {

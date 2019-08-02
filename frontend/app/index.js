@@ -40,6 +40,7 @@ let lives
 let imgLife
 let imgBackground
 let imgObject
+let imgPlatform
 
 // Audio
 let sndMusic
@@ -76,6 +77,7 @@ function preload() {
     }
 
     imgObject = Koji.config.images.objectImage ? loadImage(Koji.config.images.objectImage) : null
+    imgPlatform = Koji.config.images.platformImage ? loadImage(Koji.config.images.platformImage) : null
     imgLife = loadImage(Koji.config.images.lifeIcon)
     soundImage = loadImage(Koji.config.images.soundImage)
     muteImage = loadImage(Koji.config.images.muteImage)
@@ -125,7 +127,7 @@ function setup() {
     groundLeft = new Ground({ x: 0, y: height / 2 }, { width: 10, height }, { shape: 'rectangle', color: { r: 255, g: 255, b: 255, a: 1 }})
     groundRight = new Ground({ x: width, y: height / 2 }, { width: 10, height }, { shape: 'rectangle', color: { r: 255, g: 255, b: 255, a: 1 }})
 
-    platform = new Platform({ x: width / 2 , y: 200 }, { width: objSize * 8, height: objSize * 0.8 }, { shape: 'rectangle', color: { r: 0, g: 0, b: 0, a: 1 }, rotate: true })
+    platform = new Platform({ x: width / 2 , y: 200 }, { width: objSize * 8, height: objSize * 0.8 }, { shape: 'rectangle', image: imgPlatform, color: { r: 0, g: 0, b: 0, a: 1 }, rotate: true })
     
     // The initial playable object. 
     // * If you want the playable objects be constant accross the games,

@@ -43,7 +43,7 @@ function gamePlay() {
 
     // reconstruct the platform
     platform.destruct()
-    platform = new Platform({ x: width / 2 , y: 200 }, { width: objSize * 8, height: objSize * 0.8 }, { shape: 'rectangle', color: { r: 0, g: 0, b: 0, a: 1 }, rotate: true })
+    platform = new Platform({ x: width / 2 , y: 200 }, { width: objSize * 8, height: objSize * 0.8 }, { shape: 'rectangle', image: imgPlatform, color: { r: 0, g: 0, b: 0, a: 1 }, rotate: true })
     platform.show()
 
     loseLife()
