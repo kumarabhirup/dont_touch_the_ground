@@ -1,6 +1,6 @@
 {
   "strings": {
-    "objectShape": "circle",
+    "objectShape": "rectangle",
     "scoreIncreaseSpeed": "2",
     "scoreDecreaseSpeed": "1",
     "fontFamily": "https://fonts.googleapis.com/css?family=Russo+One",

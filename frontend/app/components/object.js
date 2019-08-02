@@ -48,7 +48,23 @@ class GameObject {
 
       return rectCircleColliding(circle, rectangle)
       
+    } else if (this.settings.shape === 'rectangle' && shape === 'rectangle') {
+
+      let thisRectangle = { x: this.body.position.x, y: this.body.position.y, w: this.sizing.width, h: this.sizing.height }
+      let otherRectangle = { x: body.position.x, y: body.position.y, w: otherElement.sizing.width, h: otherElement.sizing.height }
+
+      return rectRectColliding(thisRectangle, otherRectangle)
+
     }
+  }
+
+  /**
+   * @description Used to detect if the object is out of the frame
+   *              Sometimes, the objects fall out of the given frames (which is a BUG)
+   *              But, if the bug occurs, this function will help us do something about it.
+   */
+  wentOutOfFrame() {
+    return (this.body.position.x > width + 500 || this.body.position.y > height + 500)
   }
 
   show() {
@@ -61,7 +77,7 @@ class GameObject {
 
     switch (this.settings.shape) {
       case 'circle':
-        this.settings.image 
+        this.settings.image
           ?
           (() => {
             imageMode(CENTER)

@@ -1,6 +1,4 @@
-/* global Koji, GameObject, Matter */
-
-const { Constraint, World } = Matter
+/* global Koji, GameObject */
 
 class Platform extends GameObject {
   constructor (
@@ -9,5 +7,9 @@ class Platform extends GameObject {
     settings = {shape: 'rectangle', image: null, color: { r: 255, g: 255, b: 255, a: 1 }, rotate: true} // shape can either be a circle or a rectangle
   ) {
     super(cordinates, sizing, settings)
+    this.body.angularVelocity = 0.02
+    this.body.angularSpeed = 0.02
+    this.body.mass = 10
+    // console.log(this.body)
   }
 }

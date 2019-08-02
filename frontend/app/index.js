@@ -126,12 +126,16 @@ function setup() {
     groundRight = new Ground({ x: width, y: height / 2 }, { width: 10, height }, { shape: 'rectangle', color: { r: 255, g: 255, b: 255, a: 1 }})
 
     platform = new Platform({ x: width / 2 , y: 200 }, { width: objSize * 8, height: objSize * 0.8 }, { shape: 'rectangle', color: { r: 0, g: 0, b: 0, a: 1 }, rotate: true })
+    
+    // The initial playable object. 
+    // * If you want the playable objects be constant accross the games,
+    // * Keep these same GameObject settings for the new GameObject that appears after losing life
+    // you can make ensure that in app/game.js file
     playableObject = new GameObject (
-        { x: width / 2, y: 170 }, 
+        { x: width / 2, y: 170 },
         { radius: objSize * 2, width: objSize * 2, height: objSize * 2 }, // radius works for circle shape, width and height work for rectangular shape
         { shape: Koji.config.strings.objectShape, image: imgObject, color: { r: 0, g: 255, b: 255, a: 1 }, rotate: true } // either `rectangle` or `circle` shape allowed. Else see some error.
     )
-
 
     gameBeginning = true
 
