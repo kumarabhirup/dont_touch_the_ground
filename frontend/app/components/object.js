@@ -2,6 +2,16 @@
 
 const { Bodies, World } = Matter
 
+/**
+ * @class GameObject
+ * @description Everything moving in game, i.e. the ground, the platform and the playable object uses this class.
+ *              This is the base class for all objects that need to show up, get destroyed or added to the world.
+ * 
+ * @method show()
+ * @method didTouch()
+ * @method wentOutOfFrame()
+ * @method destruct()
+ */
 class GameObject {
   constructor (
     cordinates = {x: null, y: null}, // positioning

@@ -1,5 +1,6 @@
 /* global p5, Koji, Object, Platform */
 
+// This function runs when the Game Screen is ON
 function gamePlay() {
   // Update all floating text objects
   for (let i = 0; i < floatingTexts.length; i++) {

@@ -1,5 +1,6 @@
 /* global p5, Koji */
 
+// This function runs when the Game Screen is OFF, i.e. game is over or not yet started
 function gameBeginningOver() {
   // Draw title
   let titleText = Koji.config.strings.title
