@@ -56,6 +56,14 @@ Avoid resizing the game window while playing, weird stuff happens.
 
 Few Koji Visual Customization Controls are already there for you to use. They were put together by @Svarog and @kumar_abhirup on Koji platform.
 
+## 🤙 Wanna contribute?
+
+Just shoot a Pull Request at [the official GitHub repository of this game 📦](https://github.com/KumarAbhirup/dont_touch_the_ground)
+
+Or follow me and DM on [Twitter @kumar_abhirup](https://twitter.com/kumar_abhirup) 🙌
+
+Or hit me up on Koji's official Discord server, username: kumar_abhirup 🌱
+
 ## 📝 Licence
 
 **GPL © [Kumar Abhirup](https://kumar.now.sh)**
