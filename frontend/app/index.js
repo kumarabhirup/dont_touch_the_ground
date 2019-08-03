@@ -120,6 +120,8 @@ function setup() {
     engine = Engine.create()
     world = engine.world
 
+    engine.world.gravity.y = 0.5 // 0 for no gravity, -1 for gravity to pull up, 1 for maximum gravity pulling downwards.
+
     playButton = new PlayButton()
     soundButton = new SoundButton()
 

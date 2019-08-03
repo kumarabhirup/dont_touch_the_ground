@@ -10,7 +10,7 @@
 
 ## 😃 Getting Started
 
-Main code is in *frontend/app/index.js*
+Main code is in `frontend/app/index.js`.
 
 I've provided comments in the most important parts of the code, so you don't get lost. 
 
