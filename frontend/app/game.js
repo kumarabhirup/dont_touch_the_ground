@@ -38,13 +38,13 @@ function gamePlay() {
     playableObject = new GameObject (
       { x: width / 2, y: 170 }, 
       { radius: objSize * 2, width: objSize * 3, height: objSize * 3 }, // radius works for circle shape, width and height work for rectangular shape
-      { shape: Koji.config.strings.objectShape, image: imgObject, color: { r: 0, g: 255, b: 255, a: 1 }, rotate: true } // either `rectangle` or `circle` shape allowed. Else see some error.
+      { shape: Koji.config.strings.objectShape, image: imgObject, color: { r: 0, g: 255, b: 255, a: 1 }, rotate: true, movable: false } // either `rectangle` or `circle` shape allowed. Else see some error.
     )
     playableObject.show()
 
     // reconstruct the platform
     platform.destruct()
-    platform = new Platform({ x: width / 2 , y: 200 }, { width: objSize * 8, height: objSize * 0.8 }, { shape: 'rectangle', image: imgPlatform, color: { r: 0, g: 0, b: 0, a: 1 }, rotate: true })
+    platform = new Platform({ x: width / 2 , y: 200 }, { width: objSize * 8, height: objSize * 0.8 }, { shape: 'rectangle', image: imgPlatform, color: { r: 0, g: 0, b: 0, a: 1 }, rotate: true, movable: true })
     platform.show()
 
     loseLife()
