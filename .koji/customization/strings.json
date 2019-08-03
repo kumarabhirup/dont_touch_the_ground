@@ -17,30 +17,31 @@
     "health": "4",
     "lives": "4"
   },
-  "@@editor": [{
-      "key": "objectShape",
-      "name": "Shape of the object",
-      "type": "text",
-      "description": "Shape of the object to dodge. Either `circle` or `rectangle`, else see an error."
-    },
-    {
-      "key": "scoreIncreaseSpeed",
-      "name": "Score Increase Speed",
-      "type": "text",
-      "description": "Number to increase the score by when ball is in the air."
-    },
-    {
-      "key": "scoreDecreaseSpeed",
-      "name": "Score Decrease Speed",
-      "type": "text",
-      "description": "Number to decrease the score by when ball is touching the platform."
-    },
+  "@@editor": [
     {
       "key": "strings",
       "name": "Game Settings",
       "icon": "💡",
       "source": "strings.json",
       "fields": [{
+          "key": "objectShape",
+          "name": "Shape of the object",
+          "type": "text",
+          "description": "Shape of the object to dodge. Either `circle` or `rectangle`, else see an error."
+        },
+        {
+          "key": "scoreIncreaseSpeed",
+          "name": "Score Increase Speed",
+          "type": "text",
+          "description": "Number to increase the score by when ball is in the air."
+        },
+        {
+          "key": "scoreDecreaseSpeed",
+          "name": "Score Decrease Speed",
+          "type": "text",
+          "description": "Number to decrease the score by when ball is touching the platform."
+        },
+        {
           "key": "title",
           "name": "Game Title",
           "description": "The title that is displayed in the start menu",
