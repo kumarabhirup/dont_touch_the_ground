@@ -1,11 +1,11 @@
 {
   "images": {
-    "objectImage": "",
-    "platformImage": "",
+    "objectImage": "https://i.ibb.co/gSzf3sZ/spongebob.png",
+    "platformImage": "https://img.freepik.com/free-photo/abstract-painted-yellow-watercolor-background-paper-texture_23-2147835996.jpg?size=626&ext=jpg",
     "soundImage": "https://i.imgur.com/rtFppa8.png",
     "muteImage": "https://i.imgur.com/AR7C733.png",
     "lifeIcon": "https://i.imgur.com/SKksWaw.png",
-    "background": ""
+    "background": "https://i.ibb.co/qYzbsPY/background.jpg"
   },
   "@@editor": [{
     "key": "images",

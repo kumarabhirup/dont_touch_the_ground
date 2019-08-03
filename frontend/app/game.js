@@ -37,7 +37,7 @@ function gamePlay() {
     playableObject.destruct()
     playableObject = new GameObject (
       { x: width / 2, y: 170 }, 
-      { radius: objSize * 2, width: objSize * 2, height: objSize * 2 }, // radius works for circle shape, width and height work for rectangular shape
+      { radius: objSize * 2, width: objSize * 3, height: objSize * 3 }, // radius works for circle shape, width and height work for rectangular shape
       { shape: Koji.config.strings.objectShape, image: imgObject, color: { r: 0, g: 255, b: 255, a: 1 }, rotate: true } // either `rectangle` or `circle` shape allowed. Else see some error.
     )
     playableObject.show()

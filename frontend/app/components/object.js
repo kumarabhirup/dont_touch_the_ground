@@ -105,7 +105,7 @@ class GameObject {
           ?
           (() => {
             imageMode(CENTER)
-            image(this.settings.image, 0, 0, diameter, diameter)
+            image(this.settings.image, 0, 0, this.sizing.width, this.sizing.height)
           })()
           :
           (() => {

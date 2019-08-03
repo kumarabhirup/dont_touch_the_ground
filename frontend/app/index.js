@@ -4,6 +4,7 @@
 const { 
   Engine,
   World,
+  Body,
   MouseConstraint,
   Mouse,
   Constraint
@@ -135,7 +136,7 @@ function setup() {
     // you can make ensure that in app/game.js file
     playableObject = new GameObject (
         { x: width / 2, y: 170 },
-        { radius: objSize * 2, width: objSize * 2, height: objSize * 2 }, // radius works for circle shape, width and height work for rectangular shape
+        { radius: objSize * 2, width: objSize * 3, height: objSize * 3 }, // radius works for circle shape, width and height work for rectangular shape
         { shape: Koji.config.strings.objectShape, image: imgObject, color: { r: 0, g: 255, b: 255, a: 1 }, rotate: true } // either `rectangle` or `circle` shape allowed. Else see some error.
     )
 
@@ -144,7 +145,8 @@ function setup() {
     playMusic()
 
     // Mouse moving
-    const mouse = Mouse.create()
+    const mouse = Mouse.create(canvas.elt)
+    mouse.pixelRatio = pixelDensity() // See https://www.youtube.com/watch?v=W-ou_sVlTWk. Watch at 7:08, to understand what this line of code means
     mConstraint = MouseConstraint.create(engine, { mouse })
     World.add(world, mConstraint)
 }
