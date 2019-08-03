@@ -37,7 +37,12 @@ class GameObject {
 
     World.add(world, this.body)
 
-    // TODO: decide the movability of the object
+    // If the body is movable, save it to this.body for mouse constraint to understand.
+    if (this.settings.movable) {
+      this.body.movable = true
+    } else {
+      this.body.movable = false
+    }
   }
 
   /**

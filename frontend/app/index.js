@@ -17,7 +17,7 @@ let gameOver = false // If it's true the game will render the main menu
 let gameBeginning = true // Should be true only before the user starts the game for the first time
 
 let world, engine, render
-let mConstraint
+let mouse, mConstraint, toBeMovedBody
 
 // Game objects
 let playableObject
@@ -164,10 +164,10 @@ function setup() {
     playMusic()
 
     // Mouse moving
-    const mouse = Mouse.create(canvas.elt)
+    mouse = Mouse.create(canvas.elt)
     mouse.pixelRatio = pixelDensity() // See https://www.youtube.com/watch?v=W-ou_sVlTWk. Watch at 7:08, to understand what this line of code means
+    
     mConstraint = MouseConstraint.create(engine, { mouse })
-    World.add(world, mConstraint)
 }
 
 // An infinite loop that never ends in p5
@@ -178,7 +178,7 @@ function draw() {
     } else {
         background(Koji.config.colors.backgroundColor)
     }
-
+    // console.log((mConstraint && mConstraint.body) ? mConstraint.body : null)
     // Draw UI
     if (gameOver || gameBeginning) {
         gameBeginningOver()
