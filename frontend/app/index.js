@@ -5,6 +5,7 @@ const {
   Engine,
   World,
   Body,
+  Render,
   MouseConstraint,
   Mouse,
   Constraint
@@ -15,7 +16,7 @@ let myFont // The font we'll use throughout the app
 let gameOver = false // If it's true the game will render the main menu
 let gameBeginning = true // Should be true only before the user starts the game for the first time
 
-let world, engine
+let world, engine, render
 let mConstraint
 
 // Game objects
@@ -103,6 +104,7 @@ function setup() {
     }
 
     const canvas = createCanvas(width, height)
+    // const canvasDom = document.getElementById('game') 👈 use it if you want custom Canvas HTML element
 
     // Magically determine basic object size depending on size of the screen
     objSize = floor(min(floor(width / gameSize), floor(height / gameSize)) * sizeModifier)
@@ -119,6 +121,21 @@ function setup() {
     // Engine and World setup
     engine = Engine.create()
     world = engine.world
+
+    // Custom renderer
+    /* use this block of code only for custom canvas linked to HTML DOM element
+    render = Render.create({
+        canvas: canvasDom,
+        engine: engine,
+        options: {
+            width,
+            height,
+            background: 'transparent',
+            wireframes: false,
+            showAngleIndicator: false
+        }
+    })
+    */
 
     engine.world.gravity.y = 0.5 // 0 for no gravity, -1 for gravity to pull up, 1 for maximum gravity pulling downwards.
 
