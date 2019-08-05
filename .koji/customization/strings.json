@@ -5,9 +5,9 @@
     "scoreDecreaseSpeed": "1",
     "fontFamily": "https://fonts.googleapis.com/css?family=Russo+One",
     "title": "Don't touch the ground!",
-    "instructions1": "Let the ball not hit the ground!",
-    "instructions2": "Drag the platform brick to save the ball from ground.",
-    "instructions3": "The more you keep it in air, the higher you score!",
+    "instructions1": "Drag the platform",
+    "instructions2": "Don't let Spongebob hit the ground",
+    "instructions3": "Keep him afloat for as long as you can",
     "gameOverText": "GAME OVER",
     "highScoreText": "High Score:",
     "playButtonText": "PLAY NOW",
@@ -23,7 +23,8 @@
       "name": "Game Settings",
       "icon": "💡",
       "source": "strings.json",
-      "fields": [{
+      "fields": [
+        {
           "key": "objectShape",
           "name": "Shape of the object",
           "type": "text",
