@@ -9,7 +9,7 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "body-parser": "^1.18.3",
-    "express": "4.16.3",
+    "express": "4.17.3",
     "isomorphic-fetch": "^2.2.1",
     "@madewithjiro/jiro-sdk": "^1.0.12",
     "gulp-babel": "8.0.0"
